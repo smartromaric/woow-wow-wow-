@@ -1,0 +1,10 @@
+{%extends 'project/main.html'%}
+{%block content%}
+<h1>single page</h1>
+{%for elt in oeuvre%}
+<li>
+    <a href="projects/{{elt.id}}">{{elt.name}}</a>
+</li>
+
+{%endfor%}
+{%endblock content%}
