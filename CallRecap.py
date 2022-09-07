@@ -42,6 +42,9 @@ class CallCenter(object):
         # MainWindow.setWindowIcon(icon)
         #Fin change icon
         MainWindow.setStyleSheet("background-color: rgb(247, 249, 249)")
+
+
+
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.TableWidgetRecapAppel = QtWidgets.QTableWidget(self.centralwidget)
@@ -147,6 +150,9 @@ class CallCenter(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.widget)
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.widget)
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.pushButton = QtWidgets.QPushButton(self.widget)
         self.pushButton.setStyleSheet("color: rgb(255, 255, 255);\n"
 "font: 10pt \"MS Shell Dlg 2\";\n"
@@ -159,6 +165,11 @@ class CallCenter(object):
 "")
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout_3.addWidget(self.pushButton)
+
+        self.horizontalLayout_4.addLayout(self.horizontalLayout_3)
+        self.horizontalSpacer_4=QtWidgets.QSpacerItem(40,20,QtWidgets.QSizePolicy.Expanding,QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(self.horizontalSpacer_4)
+
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
@@ -245,6 +256,10 @@ class CallCenter(object):
         self.action_2.setText(_translate("MainWindow", "Choisir Fichier"))
         self.actionRapport_Mensuelle.setText(_translate("MainWindow", "Rapport Mensuelle"))
         self.actionRechercher_une_Date.setText(_translate("MainWindow", "Rechercher une Date"))
+
+
+
+
 #import call-phone_rc
 
 #Debut de la logique
